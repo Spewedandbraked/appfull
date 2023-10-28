@@ -17,4 +17,4 @@ use App\Http\Controllers\TestController;
 Route::get('/', function () {
     return view('main');
 });
- Route::resource('/test', TestController::class);
+Route::resource('/test', TestController::class);
