@@ -11,7 +11,8 @@ class TestController extends Controller
      */
     public function index()
     {
-        //
+        $g = "page 1";
+        return view("bricks.destination", compact("g"));
     }
 
     /**

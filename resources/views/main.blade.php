@@ -1,7 +1,7 @@
 @extends('layouts.page')
 @section('header')
      <div style="width: 100%; height:3cm; background-color:gray; display:flex;  align-content: center; align-items: center; justify-content: center;flex-direction: column;">
-        <span>An a handsome header</span>
+        <span>Скажем: это условный сайт с рассписаниями</span>
         <div>
             <button>кнопка1</button>
             <button>кнопка2</button>

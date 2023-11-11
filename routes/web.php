@@ -15,6 +15,7 @@ use App\Http\Controllers\TestController;
 */
 
 Route::get('/', function () {
-    return view('main');
+    $g = "page 1";
+    return view('main', compact('g'));
 });
 Route::resource('/test', TestController::class);
