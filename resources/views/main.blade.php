@@ -1,11 +1,13 @@
-@extends('layouts.page')
-@section('header')
-     <div style="width: 100%; height:3cm; background-color:gray; display:flex;  align-content: center; align-items: center; justify-content: center;flex-direction: column;">
-        <span>Скажем: это условный сайт с рассписаниями</span>
-        <div>
-            <button>кнопка1</button>
-            <button>кнопка2</button>
-            <button>кнопка3</button>
-        </div>
-     </div>
+@extends('layouts.layout')
+@section('contains')
+    <div style="display: flex;   justify-content: space-evenly;
+    align-content: center;
+    align-items: center;width: 45%;
+    margin: 0 auto;
+    min-width: 210px; flex-wrap: wrap; max-width:610px;">
+        @include('includes.buttonnav', ['name' => 'Редактировать группы'])
+        @include('includes.buttonnav', ['name' => 'Добавить студентов'])
+        @include('includes.buttonnav', ['name' => 'Редактировать рассписание'])
+        @include('includes.buttonnav', ['name' => 'Смотреть рассписание'])
+    </div>
 @endsection

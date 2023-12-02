@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TestController;
+use App\Http\Controllers\TestController;    
+use App\Http\Controllers\GroupController;    
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,5 @@ Route::get('/', function () {
     return view('main', compact('g'));
 });
 Route::resource('/test', TestController::class);
+
+Route::resource('/groups', GroupController::class);

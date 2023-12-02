@@ -2,17 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use App\Models\Group;
 
-class TestController extends Controller
+class GroupController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $g = "page 1";
-        return view("includes.destination", compact("g"));
+        $group = Group::find(1);
+
+        $g = 'Просмотр групп';
+        return view("groups.index", compact('g', 'group'));
+
     }
 
     /**
@@ -20,7 +25,9 @@ class TestController extends Controller
      */
     public function create()
     {
-        //
+        $g = 'Создание групп';
+        return view("groups.create", compact('g'));
+
     }
 
     /**
@@ -28,7 +35,10 @@ class TestController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+        Group::create(['name' => $request->newgroupname,
+                        'leader' => $request->newgroupleadname]);
+        return redirect()->route('groups.index');
     }
 
     /**
