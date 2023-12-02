@@ -5,9 +5,9 @@
     align-items: center;width: 45%;
     margin: 0 auto;
     min-width: 210px; flex-wrap: wrap; max-width:610px;">
-        @include('includes.buttonnav', ['name' => 'Редактировать группы'])
-        @include('includes.buttonnav', ['name' => 'Добавить студентов'])
-        @include('includes.buttonnav', ['name' => 'Редактировать рассписание'])
-        @include('includes.buttonnav', ['name' => 'Смотреть рассписание'])
+        @include('includes.buttonnav', ['name' => 'Создать группу',                             'link' => route('groups.create')])
+        @include('includes.buttonnav', ['name' => 'Редактировать группу и добавить студентов',  'link' => route('groups.edit', 1)])
+        @include('includes.buttonnav', ['name' => 'Посмотреть группы',                          'link' => route('groups.show', 1)])
+        @include('includes.buttonnav', ['name' => 'Группы индекс',                              'link' => route('groups.index')])
     </div>
 @endsection

@@ -13,10 +13,9 @@ class GroupController extends Controller
      */
     public function index()
     {
-        $group = Group::find(1);
-
-        $g = 'Просмотр групп';
-        return view("groups.index", compact('g', 'group'));
+        $groups = Group::all();
+        $g = 'Все группы';
+        return view("groups.index", compact('g', 'groups'));
 
     }
 
@@ -54,7 +53,8 @@ class GroupController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $g = 'Редактирование группы';
+        return view("groups.create", compact('g'));
     }
 
     /**
